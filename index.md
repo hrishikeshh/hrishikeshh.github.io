@@ -1,10 +1,10 @@
 ## Work experience
 
-### Google Summer of Code (2018)[project/gsoc]
+### [Google Summer of Code (2018)](project/gsoc)
 
-### Research Intern @ Pacific Dynamics[project/pacific_dynamics]
+### [Research Intern @ Pacific Dynamics](project/pacific_dynamics)
 
-### Research Intern @ Indian Institute of Information Technology, Delhi[projects/ml_iitd]
+### [Research Intern @ Indian Institute of Information Technology, Delhi](projects/ml_iitd)
 
 ---
 
