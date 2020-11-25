@@ -4,7 +4,7 @@
 
 ## Projects  
 
-[Driver Drowsiness Detection System](https://github.com/hrishikeshh/Driver-Distraction-Detection-Application)
+### [Driver Drowsiness Detection System](https://github.com/hrishikeshh/Driver-Distraction-Detection-Application)
 
 Every year, traffic accidents due to human errors cause increasing amounts of deaths and injuries globally. To help reduce the amount of fatalities, in the paper presented here, a new module for Advanced Driver Assistance System (ADAS) which deals with automatic driver drowsiness detection based on visual information and Artificial Intelligence is presented.
 
@@ -16,7 +16,7 @@ The aim of this system is to locate, track, and analyze both the drivers face an
 
 ---
 
-[Bitcoin Market Volatility](/bitcoin_volatility_analysis)
+### [Bitcoin Market Volatility](/bitcoin_volatility_analysis)
 
 Explanation will be here
 
