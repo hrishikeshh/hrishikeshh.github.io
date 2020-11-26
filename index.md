@@ -18,12 +18,14 @@
 
 ### [Post Collegiate Income Prediction](projects/post_college_income_predictor)
 
+### [CLI Chess](projects/chess)
+
 ---
 [comment]:  <> ([Project 2 Title](/pdf/sample_presentation.pdf))
 [comment]:  <> (<img src="images/dummy_thumbnail.jpg?raw=true"/>)
 
 ## Publication
 
-### [Empirical Analysis of Bitcoin Market Volatility Using Supervised Learning Approach](https://ieeexplore.ieee.org/abstract/document/8530636/)
+##### [Empirical Analysis of Bitcoin Market Volatility Using Supervised Learning Approach](https://ieeexplore.ieee.org/abstract/document/8530636/)
 
 ---
