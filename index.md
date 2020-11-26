@@ -2,7 +2,7 @@
 
 ## Work experience
 
-### [Google Summer of Code (2018)](projects/gsoc)
+### [Google Summer of Code](projects/gsoc)
 
 ### [Research Intern @ Pacific Dynamics](projects/pacific_dynamics)
 
@@ -16,7 +16,7 @@
 
 ### [Driver Drowsiness Detection System](projects/driver_distraction_detection_application)
 
-### [Post Collegiate Income Prediction](projects/post_college_income_prediction)
+### [Post Collegiate Income Prediction](projects/post_college_income_predictor)
 
 ---
 [comment]:  <> ([Project 2 Title](/pdf/sample_presentation.pdf))
