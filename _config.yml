@@ -7,10 +7,12 @@ first_name: Hrishikesh
 middle_name:
 last_name: Singh
 email: hrishikesh.hsk@gmail.com
+
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Collections of thoughts, works and my notes.
-footer_text: >
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+  Collections of my thoughts, work and notes.
+footer_text:
+
+keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⭐ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
