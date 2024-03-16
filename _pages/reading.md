@@ -7,6 +7,10 @@ nav: false
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+> "Humans are obsessed with escapism through **movies**, **books**, **music**, **art**, daydreams, our souls weren't made for this world."
+> 
+> -- *Read somewhere, I don't remember 💭*
 
-Organize your courses by years, topics, or universities, however you like!
+---
+
+Only keeping the fleeting flairs of these pieces.
