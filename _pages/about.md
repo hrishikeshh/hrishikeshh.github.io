@@ -2,11 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='#'>.</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic1.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>555 your office number</p>
@@ -18,8 +18,12 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ex nibh, iaculis sed accumsan nec, pulvinar id nibh. Duis congue porttitor ex, mattis facilisis ante fermentum ac. Fusce sollicitudin justo nibh, vel eleifend tellus mollis sit amet. Sed sagittis nulla dui, at tincidunt leo volutpat ac. Donec maximus dolor non elit efficitur, dictum vulputate nibh viverra. Curabitur eget augue odio. Integer aliquet faucibus turpis sit amet lacinia. Phasellus at eros sodales, congue felis quis, ornare metus. Curabitur finibus massa sem, a congue odio viverra ut. Donec facilisis nulla ante, et feugiat libero molestie in. Donec convallis vitae neque non porttitor. In id mi volutpat, ultricies magna vitae, facilisis est.
-
-Donec ut velit neque. Fusce imperdiet nisl et sodales vestibulum. Maecenas rhoncus velit fringilla justo fringilla, quis ornare sapien molestie. Curabitur odio erat, porta sit amet elit ut, pulvinar commodo felis. Vivamus eu sodales enim. Suspendisse finibus ex sit amet quam lacinia, in accumsan eros molestie. Fusce auctor quis quam ut venenatis. Sed imperdiet ante eget consequat maximus. Integer rutrum auctor neque sed consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras a lectus vitae enim pellentesque dapibus sit amet non metus. Phasellus pulvinar congue libero sed consectetur. Etiam eu dolor at arcu semper convallis.
-
-Sed at enim ac quam tincidunt mattis eu vel orci. Vestibulum turpis est, auctor a lectus sit amet, finibus malesuada elit. Quisque pharetra eros malesuada condimentum feugiat. Fusce ut consectetur augue. Phasellus viverra accumsan pretium. Phasellus ultrices nisi sit amet leo dapibus bibendum. Vestibulum volutpat viverra venenatis. Aliquam tristique arcu non mi ornare pharetra. Pellentesque ultricies tincidunt sodales. Mauris vestibulum fermentum nulla quis tincidunt. Fusce viverra posuere mi, a vehicula nulla viverra at. Aenean sit amet lorem turpis. Nullam a gravida ipsum. Cras eget elit sem. Nullam mauris metus, finibus id ultricies a, tristique nec nulla.
+> *"The **Internet** is **self-destructing paper**. A place where anything written is soon destroyed by rapacious competition and the only preservation is to forever copy writing from sheet to sheet faster than they can burn.*
+>
+> *If it’s **worth writing**, it’s **worth keeping**. If it can be kept, it might be worth writing.*
+> 
+> *If you store your writing on a third party site like Blogger, Livejournal or even on your own site, but in the complex format used by blog/wiki software du jour you will lose it forever as soon as hypersonic wings of Internet labor flows direct people’s energies elsewhere.*
+> 
+> *For most information published on the Internet, perhaps that is not a moment too soon, but how can the muse of originality soar when immolating transience brushes every feather?"*
+>
+>  --[***Julian Assange***](https://en.wikipedia.org/wiki/Julian_Assange) (“Self destructing paper”, 2006-12-05)
