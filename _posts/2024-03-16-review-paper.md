@@ -13,6 +13,7 @@ authors:
 
 toc:
   - name: Structure of Paper
+    subsections:
     - name: Abstract
     - name: Introduction
     - name: The Problem
