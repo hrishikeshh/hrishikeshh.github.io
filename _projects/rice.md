@@ -2,7 +2,7 @@
 layout: page
 title: Know your rice 🍚
 description: Rice classification using Deep learning.
-img: assets/img/rice.jpg
+img: assets/img/rice_class.jpg
 importance: 2
 category: AI
 giscus_comments: false
