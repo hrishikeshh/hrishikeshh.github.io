@@ -7,10 +7,11 @@ importance: 1
 category: AI
 ---
 
-
+> Code: [GitHub Repo](https://github.com/hrishikeshh/DeepGlobe-Land-Cover-Classification)
+---
 ## 1. Background
 
-This project presumes some prior high level understanding of machine learning, deep neural networks, and working in Python, Keras, and TensorFlow 2.0.
+> This project presumes some prior high level understanding of machine learning, deep neural networks, and working in Python, Keras, and TensorFlow 2.0.
 
 **Satellite Imagery**: Satellite and remote sensing have seen great advances in recent years with one of the key catalyst being the price compression in launch costs from private space launch companies. This has allowed a wider cast of entities and organizations to deploy more satellites. The quality of imagery available to the general public, such as those from Sentinel-2, is also increasing; although still a ways from privately paid satellite services. Sentinel-2 has a typical pixel resolution of 10m band which means that each pixel represents 10m x 10m area.
 
@@ -19,7 +20,7 @@ This project presumes some prior high level understanding of machine learning, d
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/deepglobe/cnn.webp" title="Typical structure of CNN" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/deepglobe/cnn-structure.webp" title="Typical structure of CNN" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -39,7 +40,7 @@ This is where *Long et al. (2015)’s Fully Convolutional Network (FCN)* come in
     </div>
 </div>
 <div class="caption">
-    What a Fully Convolutional Network might look like. Note that this is not a true FCN but helps in gaining some intuition into the how and why. Source: HML
+    Fig: What a Fully Convolutional Network might look like. Note that this is not a true FCN but helps in gaining some intuition into the how and why. Source: HML
 </div>
 
 
@@ -57,7 +58,7 @@ Semantic Segmentation is determining which pixels in an image belongs to which c
     </div>
 </div>
 <div class="caption">
-    Semantic Segmentation Example. Source: Jeremy Jordan
+    Fig: Semantic Segmentation Example. Source: Jeremy Jordan
 </div>
 
 
@@ -81,33 +82,11 @@ Here are some sample training images:
     </div>
 </div>
 <div class="caption">
-    Sample of 8 training satellite images and their corresponding Ground Truth Mask labels.
+    Fig: Sample of 8 training satellite images and their corresponding Ground Truth Mask labels.
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Each satellite image can have up to 7 different segmentation classes where each class is denoted by a different color in the Ground Truth Mask labels. The table below shows the seven different classes, their RGB channel values, and associated color in the Ground Truth Mask labels.
 
 
 
@@ -119,45 +98,121 @@ Here are some sample training images:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/deepglobe/table.webp" title="table" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
-
-
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Fig: Breakdown of the 7 segmentation classes.
 </div>
+
+## 3. Neural Network Architectures
+
+After some research and testing, I settled on implementing two different network architectures for my problem set.
+
+### U-Net
+
+The first network architecture is [Ronneberger et al. (2015)’s U-Net](https://arxiv.org/abs/1505.04597). The U-Net was originally developed for segmenting biomedical images but have since then been widely used for segmenting many types of images by the ML community. The architecture is shown below where the convolutional and max pooling layers perform an encoder operation on the image and the convolutional and upsampling layers perform the corresponding decoder operation into a full resolution output segmentation map. It also implements long skip connections (grey arrows) which concatenate feature maps from correspondingly sized layers in the encoder and decoder layers to help with localization of objects and edges within the image.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deepglobe/u-net.webp" title="table" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Fig: Original U-Net architecture. Source: Ronneberger et al. (2015)’s U-Net
+</div>
+
+
+
+### U-Net with ResNet50 Encoder Backbone
+
+The second architecture uses transfer learning of a ResNet50 architecture trained on ImageNet to replace the encoder portion of the U-Net. An example of what such an architecture may look like is shown below. In theory, such an architecture can have good performance since it would already be trained on high level features in images from ImageNet and could reduce the amount of training needed than an entirely new untrained architecture.
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deepglobe/u-net-2.webp" title="table" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Fig: Sample ResNet50 encoder and U-Net decoder architecture. Source: Neven, Robby & Goedemé, Toon
+</div>
+
+
+## 4. Code
+
+I will just go over some of the key steps and reasoning in my code process but the code for the entire project and how to set it up can be found in my [GitHub Repo](https://github.com/hrishikeshh/DeepGlobe-Land-Cover-Classification). I chose to use Google Colab to take advantage of their GPUs for training. I developed the neural networks in Keras and TensorFlow 2.0 building on inspiration from [Zizhaozhang’s U-Net](https://github.com/zizhaozhang/unet-tensorflow-keras/blob/master/model.py) and [Nikhilroxtomar’s ResNet_U-Net](https://github.com/nikhilroxtomar/Semantic-Segmentation-Architecture/blob/main/TensorFlow/resnet50_unet.py) implementations.
+
+### Preprocessing
+
+The masks first need to be One-Hot Encoded from RGB channels into their respective channels per class like shown in the image below.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deepglobe/hot-encode.webp" title="table" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Fig: One-Hot Encode of masking images for semantic segmentation. Source: Jeremy Jordan
+</div>
+
+Since each image was 2448x2448x3 and the corresponding masks are 2448x2448x7 (each channel per class), each training sample are quite large so I had to cut them into smaller patches of 612x612 instead.
+
+We also needed a custom data generator to yield an, or batches of, image(s) during training instead of loading all training dataset into RAM all at once.
+
+
+### Training
+
+During training, our metric and loss functions are the Dice Coefficient and Dice Coefficient Loss respectively.To get a better understanding of how the U-Net is built and trained and for the second ResNet50_U-Net transfer learning model implementation please see the GitHub repo.
+
+
+## 5. Results
+
+After training, the ResNet50_U-Net had a validation dice coefficient of 0.803 and the U-Net had a dice coefficient of 0.784.
+
+Here were some of the validation results showing the original satellite image, the Ground Truth Mask, the predicted Mask from the RestNet50_U-Net architecture, and the predicted Mask from the U-Net architecture. The smaller squares below the initial first level show the activations of each of the 7 classes for the RestNet50_U-Net architecture.
 
 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/deepglobe/result-1.webp" title="table" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Fig: Sample results comparing Original Satellite Image, Ground Truth Mask, Predicted ResNet50_U-Net Model, and Predicted U-Net Model (top). Class activations for each of the 7 classes for the RestNet50_U-Net architecture (bottom).
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+Here are a couple of just the U-Net architecture.
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/deepglobe/result-2.webp" title="table" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Fig: Sample results comparing Original Satellite Image, Ground Truth Mask, and Predicted U-Net Model (top). Class activations for each of the 7 classes for the U-Net architecture (bottom).
 </div>
+
+
+## 6. Final Thoughts
+
+I hope that sharing this post and the source code can help others in the future whom may need it as reference for similar problem sets.
+
+One area of improvement for this project would be to try using an architecture specifically designed and pre-trained on semantic segmentation tasks for transfer learning instead of using the ResNet50 which is typically used for multi-class image classifications. Additionally, variations of DeepLab introduced by Chen et al. in Rethinking Atrous Convolution for Semantic Image Segmentation⁷ have found to perform extremely well on image segmentation tasks. It may bode well to give the DeepLabv3 architecture a try.
+
+Lastly, I would like to apply the knowledge gained here to more specific problems in the climate and sustainability domain like:
+
+  - Forest and tree mapping to monitor deforestation
+  - Ice-cap monitoring
+  - Smart city/urban planning
+  - Endangered wildlife monitoring
+
+---
