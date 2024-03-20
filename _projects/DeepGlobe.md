@@ -8,12 +8,6 @@ category: AI
 ---
 
 
-
-
-
-> Data Source : [DeepGlobe Land Cover Classification](https://competitions.codalab.org/competitions/18468)
-
-
 ## 1. Background
 
 This project presumes some prior high level understanding of machine learning, deep neural networks, and working in Python, Keras, and TensorFlow 2.0.
@@ -70,6 +64,8 @@ Semantic Segmentation is determining which pixels in an image belongs to which c
 ## 2. Dataset
 
 > The [DeepGlobe Land Cover Classification Challenge](https://competitions.codalab.org/competitions/18468) and hence, the dataset are governed by [DeepGlobe Rules](http://deepglobe.org/docs/DeepGlobe_Rules_3_2.pdf), The [DigitalGlobe’s Internal Use License Agreement](http://deepglobe.org/docs/CVPR_InternalUseLicenseAgreement_07-11-18.pdf), and [Annotation License Agreement](http://deepglobe.org/docs/Annotation%20License%20Agreement.pdf).
+
+> Data Source : [DeepGlobe Land Cover Classification](https://competitions.codalab.org/competitions/18468)
 
 
 **Training Data**: The dataset comprised of **803 satellite imagery** in RGB of size **2448x2448** with one set comprised of satellite images and the other set comprised of labeled masks. Each satellite image is at the 50cm pixel resolution band collected by DigitalGlobe’s satellite. 50cm pixel resolution is quite high by typical publicly accessible satellite imagery resolution standards which are usually around the 5m to 10m pixel resolution band.
