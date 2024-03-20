@@ -4,11 +4,16 @@ title: DeepGlobe Land Cover Classification
 description: Classifying land coverage using remote sensing satelite data.
 img: assets/img/land.jpg
 importance: 1
+toc:
+  beginning: true
+
 category: AI
 ---
 
 > Code: [GitHub Repo](https://github.com/hrishikeshh/DeepGlobe-Land-Cover-Classification)
+
 ---
+
 ## 1. Background
 
 > This project presumes some prior high level understanding of machine learning, deep neural networks, and working in Python, Keras, and TensorFlow 2.0.
