@@ -11,6 +11,7 @@ giscus_comments: false
 ---
 [Early blight](https://ipm.cahnr.uconn.edu/early-blight-and-late-blight-of-potato/) and [late blight](https://extension.umn.edu/disease-management/late-blight), two serious diseases of potato, are widely distributed. We are detecting the stage of the blight using deep learning to help farmers take appropriate preventive actions. 
 
+---
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/potato-disease-classification-model-using-image-data-generator.ipynb" | relative_url %}

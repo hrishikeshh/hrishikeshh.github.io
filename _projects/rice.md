@@ -30,6 +30,7 @@ The real and practical use of rice type detection from white grains can have sev
 
 Overall, rice type detection from white grains offers practical applications in ensuring product quality, meeting consumer preferences, enhancing supply chain integrity, supporting agricultural research, and promoting food safety and transparency in the food industry.
 
+---
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/rice-image-classification-by-tensorflow.ipynb" | relative_url %}
