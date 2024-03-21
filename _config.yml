@@ -278,16 +278,16 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["blockquotes"] # these categories will be displayed on the front page of your blog
+display_tags: ["Code", "Deep Learning", "code", "Literature"] # these tags will be displayed on the front page of your blog
+display_categories: ["Deep Learning", "Books", "Project"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Hrishikesh]
+  first_name: [Singh]
 
   style: apa
   locale: en
@@ -298,6 +298,7 @@ scholar:
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
+  
   bibtex_filters: [latex, smallcaps, superscript]
 
   replace_strings: true
