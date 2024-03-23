@@ -5,7 +5,7 @@ permalink: /projects/
 # description: 
 nav: true
 nav_order: 3
-display_categories: [AI, Web]
+display_categories: [AI, Web, Archive]
 horizontal: false
 ---
 

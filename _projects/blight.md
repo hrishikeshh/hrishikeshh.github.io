@@ -3,7 +3,7 @@ layout: page
 title: Blight Detection
 description: Assisting the farmers by potato blight grade detection.
 img: assets/img/blight.jpg
-importance: 2
+importance: 3
 category: AI
 giscus_comments: false
 ---
