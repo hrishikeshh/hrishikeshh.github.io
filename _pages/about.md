@@ -18,7 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-`$$ The Internet is self-destructing paper. A place where anything written is soon destroyed by rapacious competition and the only preservation is to forever copy writing from sheet to sheet faster than they can burn. $$`
+$$ The~\textbf{Internet}~is~\textbf{self-destructing~paper}.~A~place~where~anything~written~is~soon~destroyed~by~rapacious~competition~and~the~only~preservation~is~to~forever~copy~writing~from~sheet~to~sheet~faster~than~they~can~burn.$$
 
 `$$ If it’s worth writing, it’s worth keeping. If it can be kept, it might be worth writing. $$`
 
