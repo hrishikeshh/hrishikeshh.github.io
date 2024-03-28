@@ -4,7 +4,7 @@ title: How to write a review paper?
 date: 2024-03-16
 description: A walk through guide for structuring your research
 tags: research
-categories: sample-posts
+categories: research
 featured: true
 
 authors:
@@ -36,7 +36,7 @@ toc:
   - Use forward reference from the narrative in the introduction.
   - State your contributions upfront so the readers won't have to guess
 - The Problem (1 page)
-  - 
+  
 - Our idea (2 page)
   - In a paper your MUST provide the details, but FIRST convey the idea.
   - Conveying the intuition is primary, never secondary.
@@ -71,5 +71,3 @@ Three readers = You, your supervisor and the reviewer.
 
 ### Conclusions and future Work 
 
-
-## Section-x
